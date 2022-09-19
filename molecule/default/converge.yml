@@ -3,6 +3,6 @@
   hosts: all
   become: true
   tasks:
-    - name: "Include acme.my_new_role"
-      include_role:
-        name: "acme.my_new_role"
+    - name: Include acme.my_new_role
+      ansible.builtin.include_role:
+        name: acme.molecule_reference_role
