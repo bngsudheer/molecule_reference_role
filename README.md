@@ -16,6 +16,7 @@ python3 -m venv ansible-env # you may have to uninstall other Ansible and molecu
 source ansible-env/bin/activate
 pip install molecule[docker,lint,docker] ansible-lint
 # cd molecule_reference_role/ # this repository root
+yamllint .
 molecule converge
 ```
 * Install molecule in a Python virtual environment
