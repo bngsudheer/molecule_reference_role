@@ -1,0 +1,7 @@
+---
+# tasks file for my_new_role
+- name: Install
+  apt:
+    name: 
+      - apache2
+    update_cache: "yes"
