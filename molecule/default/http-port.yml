@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  tasks:
+    - name: Include acme.my_new_role
+      ansible.builtin.include_role:
+        name: acme.molecule_reference_role
+  post_tasks:
+    - name: Ensure Apache is running
+      uri: 
+        url: "http://127.0.0.1:80"
+        status_code: 200
+      register: result
+      until: result.status == 200
+      retries: 60
+      delay: 1
