@@ -4,3 +4,9 @@
     name: 
       - apache2
     update_cache: "yes"
+
+- name: Start and enable apache2
+  ansible.builtin.systemd:
+    name: apache2
+    state: started
+    enabled: true

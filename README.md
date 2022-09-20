@@ -17,7 +17,10 @@ source ansible-env/bin/activate
 pip install molecule[docker,lint,docker] ansible-lint
 # cd molecule_reference_role/ # this repository root
 yamllint .
+molecule lint
 molecule converge
+MOLECULE_PLAYBOOK=http-port.yml
+molecule test
 ```
 * Install molecule in a Python virtual environment
 * 
