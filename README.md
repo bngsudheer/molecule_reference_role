@@ -23,9 +23,6 @@ molecule converge
 MOLECULE_PLAYBOOK=http-port.yml
 molecule test
 ```
-* Install molecule in a Python virtual environment
-* 
-* molecule converge
 
 Role Variables
 --------------
